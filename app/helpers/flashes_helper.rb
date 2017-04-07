@@ -1,4 +1,4 @@
-moudle FlashesHelper
+module FlashesHelper
   FLASHES_CLASSES = { alert: "danger", notice: "success", warning: "warning"}.freeze
 
   def falsh_class(key)
@@ -8,3 +8,4 @@ moudle FlashesHelper
   def user_facing_flashes
     flash.to_hash.slice "alert", "notice", "warning"
   end
+end
