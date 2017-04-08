@@ -1,0 +1,28 @@
+<div class="col-md-12">
+  <h2 class="text-center">我加入的讨论组</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>标题</th>
+        <th>描述</th>
+        <th>文章数量</th>
+        <th>更新时间</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% @groups.each do |g| %>
+      <tr>
+        <td>#</td>
+        <td><%= link_to(g.title, groups_path(g)) %></td>
+        <td><%= g.description %></td>
+        <td><%= g.posts.count %>
+        <td><%= g.updated_at %>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+</div>
